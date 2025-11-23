@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Link para o arquivo CSS que estiliza a página -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <title>Jogo da Velha JS</title>
+</head>
+<body>
+    <!-- Cabeçalho do jogo -->
+    <header><span>Jogo da Velha em Javascript</span></header>
+    
+    <!-- Container principal que centraliza o tabuleiro -->
+    <div class="container">
+        <!-- Estrutura do tabuleiro 3x3 -->
+        <div>
+            <!-- Linha 1 do tabuleiro -->
+            <div class="linha">
+                <!-- Cada célula tem um ID único (n1 a n9) e contém uma imagem -->
+                <div class="celula" id="n1">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n2">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n3">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+            </div>
+            <!-- Linha 2 do tabuleiro -->
+            <div class="linha">
+                <div class="celula" id="n4">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n5">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n6">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+            </div>
+            <!-- Linha 3 do tabuleiro -->
+            <div class="linha">
+                <div class="celula" id="n7">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n8">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+                <div class="celula" id="n9">
+                    <img src="images/vazio.png" alt="" class="imagem-celula">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Área de status e controles do jogo -->
+    <div class="status">
+        <!-- Elemento que exibe o estado atual do jogo -->
+        <p id="status-jogo">Sua vez (O) - Clique em uma célula</p>
+        <!-- Botão para reiniciar o jogo -->
+        <button id="reiniciar">Reiniciar Jogo</button>
+    </div>
+    
+    <!-- Inclusão do arquivo JavaScript com a lógica do jogo -->
+    <script src="jogo_da_velha_web.js"></script>
+</body>
+</html>

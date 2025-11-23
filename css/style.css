@@ -1,0 +1,200 @@
+/* ESTILOS GERAIS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    /* FLEXBOX: Layout responsivo e centralizado */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    /* SOMBRA: Efeito visual moderno */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    /* FLEXBOX: Centraliza conteúdo vertical e horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ocupa espaço restante */
+    padding: 20px;
+}
+
+/* TABULEIRO PRINCIPAL */
+.principal {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    /* SOMBRA: Profundidade visual */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* LINHAS DO TABULEIRO */
+.linha {
+    /* FLEXBOX: Organiza células na horizontal */
+    display: flex;
+    flex-direction: row;
+}
+
+/* CÉLULAS INDIVIDUAIS */
+.celula {
+    width: 100px;
+    height: 100px;
+    /* FLEXBOX: Centraliza conteúdo internamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Indica que é clicável */
+    /* TRANSITION: Animação suave em interações */
+    transition: all 0.3s ease;
+    background-color: white;
+    /* BOX-SIZING: Garante que padding/border não alterem dimensões */
+    box-sizing: border-box;
+}
+
+/* EFEITO HOVER NAS CÉLULAS */
+.celula:hover {
+    background-color: #f8f9fa;
+}
+
+/* EFEITO CLIQUE NAS CÉLULAS */
+.celula:active {
+    transform: scale(0.95); /* Efeito de pressionar */
+}
+
+/* IMAGENS DENTRO DAS CÉLULAS */
+.imagem-celula {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Mantém proporção da imagem */
+}
+
+/* BORDAS ESPECÍFICAS PARA FORMAR TABULEIRO DO JOGO DA VELHA */
+/* SELETORES POR ID: Estilização específica para cada célula */
+
+/* Primeira linha - Borda inferior e direita/esquerda conforme posição */
+#n1 {
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+}
+
+#n2 {
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    border-left: 3px solid #333;
+}
+
+#n3 {
+    border-bottom: 3px solid #333;
+    border-left: 3px solid #333;
+}
+
+/* Segunda linha - Bordas completas */
+#n4 {
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    border-top: 3px solid #333;
+}
+
+#n5 {
+    border: 3px solid #333; /* Todas as bordas */
+}
+
+#n6 {
+    border-bottom: 3px solid #333;
+    border-left: 3px solid #333;
+    border-top: 3px solid #333;
+}
+
+/* Terceira linha - Borda superior e direita/esquerda */
+#n7 {
+    border-right: 3px solid #333;
+    border-top: 3px solid #333;
+}
+
+#n8 {
+    border-right: 3px solid #333;
+    border-left: 3px solid #333;
+    border-top: 3px solid #333;
+}
+
+#n9 {
+    border-left: 3px solid #333;
+    border-top: 3px solid #333;
+}
+
+/* ÁREA DE STATUS */
+.status {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+/* TEXTO DE STATUS */
+#status-jogo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 30px; /* Garante espaço mesmo sem texto */
+}
+
+/* BOTÃO REINICIAR */
+#reiniciar {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* EFEITOS HOVER NO BOTÃO */
+#reiniciar:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Efeito de levantar */
+}
+
+#reiniciar:active {
+    transform: translateY(0); /* Volta ao normal quando clicado */
+}
+
+/* MEDIA QUERIES - RESPONSIVIDADE */
+/* Ajustes para telas menores que 400px */
+@media (max-width: 400px) {
+    .celula {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .imagem-celula {
+        width: 60px;
+        height: 60px;
+    }
+    
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    #status-jogo {
+        font-size: 18px;
+    }
+}
